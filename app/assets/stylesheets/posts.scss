@@ -1,3 +1,57 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-area {
+  text-align: center;
+  background-image: image-url('jax.jpg');
+  background-repeat: no-repeat;
+  /*Give the background a fixed position does it not scroll when you scroll*/
+  background-size: cover;
+  /*Have the background cover the entire div section*/
+  display: block;
+  height: 400px;
+  width: 100%;
+  background-position:center;
+  justify-content: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.header-content {
+  position: relative;
+  top: 50%;
+}
+
+/* Card Design */
+
+.box {
+  padding: 10px;
+  min-height: 360px;
+  box-sizing: border-box;
+}
+
+.box .inner {
+  background-color: #fff;
+  border: 2px darkblue solid;
+  min-height: 360px;
+}
+
+.button {
+  margin: 0 auto;
+  position: relative;
+}
+
+.button:visited {
+  color: white;
+}
+
+.card-img-top {
+  width: 100%;
+  max-height: 200px;  
+}
+
+#posts {
+  width: 85%;
+}
