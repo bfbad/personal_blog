@@ -1,0 +1,13 @@
+<div class = "blog-comments">
+  <% @notes.each do |note| %>
+    <div class = "row">
+      <hr>
+        <p>
+          <%= note.user.name %> <small><em><%= "#{time_ago_in_words(note.created_at)} ago" %></em></small> <% if signed_in? && current_user.admin? %><%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, post_note_path(note.post, note), method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+        </p>
+        <p>
+          <%= note.body %>
+        </p>
+    </div> <!-- /row -->
+  <% end %>
+</div> <!-- /blog-comments -->
