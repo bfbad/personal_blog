@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @notes = @post.notes.order("created_at DESC")
+    @notes = @post.notes.order("created_at DESC").paginate(:page => params[:page])
   end
 
   # GET /posts/new
