@@ -3,8 +3,10 @@
 <div class="container blog-post">
   <h1><%= @post.title %></h1>
   <p>Created on: <%= @post.created_at.strftime("%d %B %Y") %>
-  <%= image_tag(@post.image_url, class: "img-responsive") =%>
+  <%= image_tag(@post.image_url, class: "img-responsive") %>
   <p><%= raw @post.body %></p>
+  <%= render 'new_note', post: @post %>
+  <%= render 'notes', post: @post %>
   <%= link_to '<<< Back to posts', posts_path %>
   <br><br>
 </div> <!-- /container -->

@@ -10,15 +10,22 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @notes = @post.notes.order("created_at DESC")
   end
 
   # GET /posts/new
   def new
+    if !user_signed_in? || !current_user.admin?
+      redirect_to posts_path
+    end
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
+    if !user_signed_in? || !current_user.admin?
+      redirect_to posts_path
+    end
   end
 
   # POST /posts
