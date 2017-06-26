@@ -1,24 +1,14 @@
-# README
+# Personal blog
+## Demo blog written in Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hosted on [heroku](http://brandon-personal-blog.herokuapp.com)
 
-Things you may want to cover:
++ CKEditor for blog creation
++ devise for comment and for tagging administrator accounts
++ Bootstrap layout
 
-* Ruby version
+Features:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
++ Administrative features to create a new blog post using CKEditor.
++ Admins can remove inappropriate comments.
++ Users can create an account to add a comment.
